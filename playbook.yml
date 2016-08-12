@@ -2,10 +2,15 @@
   vars:
     homebrew_packages:
       - ack
+      - mas
     homebrew_taps:
       - caskroom/cask
     homebrew_cask_apps:
       - google-chrome
+    app_store_apps:
+      # Airmail 3
+      - 918858936
 
   tasks:
     - include: tasks/homebrew.yml
+    - include: tasks/mas.yml
