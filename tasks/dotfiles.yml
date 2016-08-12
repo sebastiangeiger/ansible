@@ -1,0 +1,8 @@
+- name: Ensure dotfiles repository is cloned locally.
+  git:
+    repo: "https://github.com/sebastiangeiger/new-dotfiles.git"
+    dest: "~/dotfiles"
+    version: "neovim"
+    update: no
+    accept_hostkey: True
+  become: no
