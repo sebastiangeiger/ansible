@@ -1,2 +1,2 @@
 # Ansible for laptop setup
-Run with `ansible-playbook helloworld.yml`
+Run with `ansible-playbook playbook.yml`

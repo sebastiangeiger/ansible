@@ -1,0 +1,16 @@
+
+- name: Check if homebrew binary is already in place.
+  stat: path=/usr/local/bin/brew
+  register: homebrew_binary
+
+- name: Make tmp folder
+  file: path=/tmp/homebrew_install state=directory mode=0755
+  when: homebrew_binary.stat.exists == false
+
+- name: Download homebrew
+  get_url: url=https://raw.githubusercontent.com/Homebrew/install/master/install dest=/tmp/homebrew_install
+  when: homebrew_binary.stat.exists == false
+
+- name: Install homebrew
+  command: /usr/bin/ruby /tmp/homebrew_install/install
+  when: homebrew_binary.stat.exists == false

@@ -1,0 +1,6 @@
+- hosts: localhost
+  vars:
+    homebrew_installed_packages:
+      - ack
+  tasks:
+    - include: tasks/homebrew.yml
