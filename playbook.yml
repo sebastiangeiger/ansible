@@ -14,6 +14,18 @@
       - 918858936
       # Dash 3
       - 449589707
+    dotfiles_files:
+      - .ackrc
+      - .bin
+      - .colordiffrc
+      - .config
+      - .git
+      - .gitignore
+      - .gitignore_global
+      - .nvimrc
+      - .tmux.conf
+
+
 
   tasks:
     - include: tasks/homebrew.yml
