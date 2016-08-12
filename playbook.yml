@@ -10,6 +10,8 @@
     app_store_apps:
       # Airmail 3
       - 918858936
+      # Dash 3
+      - 449589707
 
   tasks:
     - include: tasks/homebrew.yml
