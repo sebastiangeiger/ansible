@@ -1,6 +1,11 @@
 - hosts: localhost
   vars:
-    homebrew_installed_packages:
+    homebrew_packages:
       - ack
+    homebrew_taps:
+      - caskroom/cask
+    homebrew_cask_apps:
+      - google-chrome
+
   tasks:
     - include: tasks/homebrew.yml

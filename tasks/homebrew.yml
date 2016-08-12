@@ -14,3 +14,15 @@
 - name: Install homebrew
   command: /usr/bin/ruby /tmp/homebrew_install/install
   when: homebrew_binary.stat.exists == false
+
+- name: Ensure configured homebrew packages are installed.
+  homebrew: "name={{ item }} state=present"
+  with_items: "{{ homebrew_packages }}"
+
+- name: Ensure configured taps are tapped.
+  homebrew_tap: "tap={{ item }} state=present"
+  with_items: "{{ homebrew_taps }}"
+
+- name: Ensure configured homebrew casks are installed.
+  homebrew_cask: "name={{ item }} state=present"
+  with_items: "{{ homebrew_cask_apps }}"
