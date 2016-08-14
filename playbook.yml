@@ -7,7 +7,6 @@
       - .bin
       - .colordiffrc
       - .config
-      - .git
       - .gitignore
       - .gitignore_global
       - .nvimrc
