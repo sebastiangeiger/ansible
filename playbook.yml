@@ -1,19 +1,7 @@
 - hosts: localhost
   vars:
-    homebrew_packages:
-      - ack
-      - mas
     homebrew_taps:
-      - caskroom/cask
-    homebrew_cask_apps:
-      - google-chrome
-      - spotify
-      - omnifocus
-    app_store_apps:
-      # Airmail 3
-      - 918858936
-      # Dash 3
-      - 449589707
+      - Homebrew/bundle
     dotfiles_files:
       - .ackrc
       - .bin
@@ -24,10 +12,10 @@
       - .gitignore_global
       - .nvimrc
       - .tmux.conf
+      - Brewfile
 
 
 
   tasks:
     - include: tasks/homebrew.yml
-    - include: tasks/mas.yml
     - include: tasks/dotfiles.yml
