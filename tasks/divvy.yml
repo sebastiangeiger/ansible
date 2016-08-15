@@ -1,0 +1,11 @@
+- name: Install python module dependencies
+  pip: name=biplist
+  become: True
+
+- name: Move plist file in
+  copy:
+    src: plists/com.mizage.direct.Divvy.plist
+    dest: ~/Library/Preferences/com.mizage.direct.Divvy.plist
+
+- name: Set license
+  command: "defaults write com.mizage.direct.Divvy kXMRegCode -string {{ divvy_license }}"
