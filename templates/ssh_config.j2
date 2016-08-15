@@ -1,0 +1,9 @@
+{% for entry in ssh_config %}
+Host {{ entry.host }}
+  HostName {{ entry.host }}
+  {% if entry.user is defined %}
+User {{ entry.user }}
+  {% endif %}
+IdentityFile {{ entry.identity_file }}
+
+{% endfor %}
