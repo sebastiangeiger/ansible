@@ -18,8 +18,4 @@
   tasks:
     - include: tasks/homebrew.yml
     - include: tasks/dotfiles.yml
-    - name: Change default shell to fish 
-      become: True
-      user: 
-        name: seb
-        shell: /usr/local/bin/fish
+    - include: tasks/fish.yml
