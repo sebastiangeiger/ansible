@@ -1,0 +1,10 @@
+- name: Ensure bundle folder exists
+  file: path="~/.nvim/bundle" state=directory mode=0755
+
+- name: Vundle repository is checked out
+  git:
+    repo: "https://github.com/gmarik/Vundle.vim.git"
+    dest: "~/.nvim/bundle/Vundle.vim"
+
+- name: Install Vundle plugins
+  command: "/usr/local/bin/nvim -u ~/.nvimrc +PluginInstall +qall"

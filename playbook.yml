@@ -13,9 +13,8 @@
       - .tmux.conf
       - Brewfile
 
-
-
   tasks:
     - include: tasks/homebrew.yml
     - include: tasks/dotfiles.yml
     - include: tasks/fish.yml
+    - include: tasks/vim.yml
