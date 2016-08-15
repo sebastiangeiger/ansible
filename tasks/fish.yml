@@ -1,5 +1,10 @@
+- name: Get userinfo
+  command: finger seb
+  register: user_info
+
 - name: Change default shell to fish
   become: True
   user:
     name: seb
     shell: /usr/local/bin/fish
+  when: user_info.stdout.find("/usr/local/bin/fish") == -1
