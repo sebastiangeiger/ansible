@@ -14,6 +14,7 @@
       - Brewfile
 
   tasks:
+    - include_vars: secrets.yml
     - include: tasks/homebrew.yml
     - include: tasks/dotfiles.yml
     - include: tasks/fish.yml
