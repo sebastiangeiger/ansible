@@ -7,7 +7,7 @@
       - .bin
       - .colordiffrc
       - .config
-      - .gitignore
+      - .gitconfig
       - .gitignore_global
       - .nvimrc
       - .tmux.conf
