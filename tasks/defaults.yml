@@ -1,0 +1,8 @@
+- name: Turn off natural scroll direction
+  command: "defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false"
+
+- name: Holding down key will type multiple characters
+  command: "defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false"
+
+- name: Dark mode (requires logging out)
+  command: "defaults write -g AppleInterfaceStyle -string Dark"

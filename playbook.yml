@@ -21,3 +21,4 @@
     - include: tasks/fish.yml
     - include: tasks/vim.yml
     - include: tasks/divvy.yml
+    - include: tasks/defaults.yml
