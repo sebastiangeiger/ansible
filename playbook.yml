@@ -23,3 +23,4 @@
     - include: tasks/divvy.yml
     - include: tasks/defaults.yml
     - include: tasks/ruby.yml
+    - include: tasks/alfred.yml

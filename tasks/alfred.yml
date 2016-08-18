@@ -1,0 +1,2 @@
+- name: "Set alfred sync folder"
+  command: "defaults write com.runningwithcrayons.Alfred-Preferences-3 syncfolder -string '~/Dropbox/Settings/Alfred'"
