@@ -1,0 +1,19 @@
+- name: Get installed versions
+  register: ruby_versions
+  command: rbenv versions
+
+- name: Write the global default gem list
+  copy:
+    src: templates/default-gems
+    dest: /usr/local/var/rbenv/default-gems
+
+- name: Install ruby 2.3.1
+  command: rbenv install 2.3.1
+  when: ruby_versions.stdout.find('2.3.1') == -1
+
+- name: Install ruby 2.2.5
+  command: rbenv install 2.2.5
+  when: ruby_versions.stdout.find('2.2.5') == -1
+
+- name: Make ruby 2.3.1 the global default
+  command: rbenv global 2.3.1
