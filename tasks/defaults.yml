@@ -6,3 +6,30 @@
 
 - name: Dark mode (requires logging out)
   command: "defaults write -g AppleInterfaceStyle -string Dark"
+
+- name: Play sound when adjusting volume
+  command: "defaults write -g com.apple.sound.beep.feedback -integer 1"
+
+- name: F8 = F8 not pause/play
+  command: "defaults write -g com.apple.keyboard.fnState -bool true"
+
+- name: Expand save panel by default
+  command: "defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true"
+
+- name: Don't show Siri in menu bar
+  command: 'defaults write com.apple.systemuiserver "NSStatusItem Visible Siri" -bool false'
+
+- name: Show airport symbole in menubar
+  command: 'defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.airport" -bool true'
+
+- name: Show battery symbol in menubar
+  command: 'defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.battery" -bool true'
+
+- name: Show clock in menubar
+  command: 'defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.clock" -bool true'
+
+- name: Show volume in menubar
+  command: 'defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -bool true'
+
+- name: Set menubar items # Not sure if this is needed
+  command: 'defaults write com.apple.systemuiserver menuExtras -array ( "/System/Library/CoreServices/Menu Extras/Clock.menu", "/System/Library/CoreServices/Menu Extras/Battery.menu", "/System/Library/CoreServices/Menu Extras/AirPort.menu", "/System/Library/CoreServices/Menu Extras/Volume.menu")'
