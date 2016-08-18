@@ -8,3 +8,8 @@
     name: seb
     shell: /usr/local/bin/fish
   when: user_info.stdout.find("/usr/local/bin/fish") == -1
+
+- name: Write secrets.fish
+  template:
+    src: templates/secrets.fish.j2
+    dest: ~/.config/fish/functions/secrets.fish
