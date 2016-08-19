@@ -24,3 +24,4 @@
     - include: tasks/defaults.yml
     - include: tasks/ruby.yml
     - include: tasks/alfred.yml
+    - include: tasks/flux.yml

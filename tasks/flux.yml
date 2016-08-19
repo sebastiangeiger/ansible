@@ -1,0 +1,14 @@
+- name: Set flux location
+  command: "defaults write org.herf.Flux location -string {{ flux.location }}"
+
+- name: Set flux locationTextField
+  command: "defaults write org.herf.Flux locationTextField -string {{ flux.location }}"
+
+- name: Set flux locationType
+  command: "defaults write org.herf.Flux locationType -string L"
+
+- name: Turn off nagging
+  command: "defaults write org.herf.Flux SUHasLaunchedBefore -int 1"
+
+- name: Set waketime
+  command: "defaults write org.herf.Flux wakeTime -int 420"
