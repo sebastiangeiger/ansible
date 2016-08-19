@@ -1,0 +1,2 @@
+- name: Set the sync folder
+  command: "defaults write com.kapeli.dashdoc syncFolderPath -string '~/Dropbox/Dash Preferences'"
