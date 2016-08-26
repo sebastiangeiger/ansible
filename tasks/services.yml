@@ -1,0 +1,7 @@
+- name: Get launchctl services
+  shell: "launchctl list | grep homebrew"
+  register: services
+
+- name: Ensure postgresql is started at login
+  command: brew services start postgresql
+  when: "'homebrew.mxcl.postgresql' not in services.stdout"
