@@ -2,6 +2,9 @@
   register: ruby_versions
   command: rbenv versions
 
+- name: Ensure rbenv folder exists
+  file: path=/usr/local/var/rbenv state=directory
+
 - name: Write the global default gem list
   copy:
     src: templates/default-gems

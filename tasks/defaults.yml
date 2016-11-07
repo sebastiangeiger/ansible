@@ -32,4 +32,4 @@
   command: 'defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -bool true'
 
 - name: Set menubar items # Not sure if this is needed
-  command: 'defaults write com.apple.systemuiserver menuExtras -array ( "/System/Library/CoreServices/Menu Extras/Clock.menu", "/System/Library/CoreServices/Menu Extras/Battery.menu", "/System/Library/CoreServices/Menu Extras/AirPort.menu", "/System/Library/CoreServices/Menu Extras/Volume.menu")'
+  command: 'defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Clock.menu", "/System/Library/CoreServices/Menu Extras/Battery.menu", "/System/Library/CoreServices/Menu Extras/AirPort.menu", "/System/Library/CoreServices/Menu Extras/Volume.menu"'

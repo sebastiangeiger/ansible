@@ -2,7 +2,7 @@
   git:
     repo: "https://github.com/sebastiangeiger/new-dotfiles.git"
     dest: "~/dotfiles"
-    version: "neovim"
+    version: "ansible"
     update: no
     accept_hostkey: True
   become: no

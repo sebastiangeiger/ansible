@@ -16,8 +16,8 @@
   tasks:
     - include_vars: secrets.yml
     - include: tasks/ssh.yml
-    - include: tasks/homebrew.yml
     - include: tasks/dotfiles.yml
+    - include: tasks/homebrew.yml
     - include: tasks/fish.yml
     - include: tasks/vim.yml
     - include: tasks/divvy.yml
