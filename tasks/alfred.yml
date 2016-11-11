@@ -1,14 +1,2 @@
 - name: "Set alfred sync folder"
   command: "defaults write com.runningwithcrayons.Alfred-Preferences-3 syncfolder -string '~/Dropbox/Settings/Alfred'"
-
-- name: "Set alfred hash"
-  command: "defaults write '~/Library/Application Support/Alfred 3/license.plist' hash -string {{ alfred.hash }}"
-
-- name: "Set alfred code"
-  command: "defaults write '~/Library/Application Support/Alfred 3/license.plist' code -string {{ alfred.code }}"
-
-- name: "Set alfred email"
-  command: "defaults write '~/Library/Application Support/Alfred 3/license.plist' email -string {{ alfred.email }}"
-
-- name: "Run alfred on startup"
-  command: osascript -e 'tell application "System Events" to make new login item at end with properties {path:"/Applications/Alfred 3.app", name:"Alfred", hidden:true}'
