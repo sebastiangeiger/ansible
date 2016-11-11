@@ -1,0 +1,39 @@
+- name: Delete all dock apps
+  command: "defaults delete com.apple.dock persistent-apps"
+  notify: restart dock
+
+- name: Delete all other dock items
+  command: "defaults delete com.apple.dock persistent-others"
+  notify: restart dock
+
+- name: Add Omnifocus to dock
+  command: "defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/OmniFocus.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'"
+  notify: restart dock
+
+- name: Add Airmail 3 to dock
+  command: "defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Airmail\ 3.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'"
+  notify: restart dock
+
+- name: Add Calendar to dock
+  command: "defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Calendar.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'"
+  notify: restart dock
+
+- name: Add Spotify to dock
+  command: "defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Spotify.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'"
+  notify: restart dock
+
+- name: Add Chrome to dock
+  command: "defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Google Chrome.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'"
+  notify: restart dock
+
+- name: Add iTerm to dock
+  command: "defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/iTerm.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'"
+  notify: restart dock
+
+- name: Hide dock
+  command: "defaults write com.apple.Dock autohide -bool TRUE"
+  notify: restart dock
+
+- name: Make dock come up faster
+  command: "defaults write com.apple.dock autohide-time-modifier -float 0.25"
+  notify: restart dock
