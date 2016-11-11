@@ -1,0 +1,23 @@
+- name: Set iStat Menus memory graph
+  command: "defaults write com.bjango.istatmenus5.extras Memory_MenubarMode 6"
+  notify: restart istat menus
+
+- name: Set iStat Menus CPU graph
+  command: "defaults write com.bjango.istatmenus5.extras CPU_MenubarMode 0"
+  notify: restart istat menus
+
+- name: Set iStat Menus network graph
+  command: "defaults write com.bjango.istatmenus5.extras Network_MenubarMode 0"
+  notify: restart istat menus
+
+- name: Determine which graphs are shown and in which order
+  command: "defaults write com.bjango.istatmenus5.extras StatusItems-Order -array 4 1 2"
+  notify: restart istat menus
+
+- name: Don't show launchers in iStat Menus dropdowns
+  command: "defaults write com.bjango.istatmenus5.extras DropdownShowLauncher 0"
+  notify: restart istat menus
+
+- name: Set iStat Menus accent color to white
+  command: "defaults write com.bjango.istatmenus5.extras MenubarSkinColor 8"
+  notify: restart istat menus

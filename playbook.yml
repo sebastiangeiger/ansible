@@ -27,3 +27,8 @@
     - include: tasks/flux.yml
     - include: tasks/dash.yml
     - include: tasks/services.yml
+    - include: tasks/istatmenus.yml
+
+  handlers:
+    - name: restart istat menus
+      command: "killall 'iStat Menus Status'"
