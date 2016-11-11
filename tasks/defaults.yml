@@ -33,3 +33,7 @@
 
 - name: Set menubar items # Not sure if this is needed
   command: 'defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Clock.menu", "/System/Library/CoreServices/Menu Extras/Battery.menu", "/System/Library/CoreServices/Menu Extras/AirPort.menu", "/System/Library/CoreServices/Menu Extras/Volume.menu"'
+
+- name: 24 hour clock with date and day
+  command: "defaults write com.apple.menuextra.clock 'DateFormat' -string 'EEE MMM d H:mm'"
+  notify: restart system ui server

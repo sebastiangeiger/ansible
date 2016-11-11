@@ -35,3 +35,5 @@
       command: "killall 'iStat Menus Status'"
     - name: restart dock
       command: "killall Dock"
+    - name: restart system ui server
+      command: "killall SystemUIServer"
