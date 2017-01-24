@@ -29,6 +29,7 @@
     - include: tasks/dash.yml
     - include: tasks/services.yml
     - include: tasks/istatmenus.yml
+    - include: tasks/menubar.yml
 
   handlers:
     - name: restart istat menus

@@ -1,0 +1,42 @@
+- name: Set position for Item-0
+  command: 'defaults write com.apple.systemuiserver "NSStatusItem Preferred Position Item-0" -int 23'
+  notify: restart system ui server
+- name: Set position for com.apple.menuextra.airport
+  command: 'defaults write com.apple.systemuiserver "NSStatusItem Preferred Position com.apple.menuextra.airport" -int 289'
+  notify: restart system ui server
+- name: Set position for com.apple.menuextra.battery
+  command: 'defaults write com.apple.systemuiserver "NSStatusItem Preferred Position com.apple.menuextra.battery" -int 211'
+  notify: restart system ui server
+- name: Set position for com.apple.menuextra.bluetooth
+  command: 'defaults write com.apple.systemuiserver "NSStatusItem Preferred Position com.apple.menuextra.bluetooth" -int 319'
+  notify: restart system ui server
+- name: Set position for com.apple.menuextra.bluetooth
+  command: 'defaults write com.apple.systemuiserver "NSStatusItem Preferred Position com.apple.menuextra.clock" -int 112'
+  notify: restart system ui server
+- name: Set position for com.apple.menuextra.bluetooth
+  command: 'defaults write com.apple.systemuiserver "NSStatusItem Preferred Position com.apple.menuextra.volume" -int 259'
+  notify: restart system ui server
+
+
+- name: Set visibility for Siri
+  command: 'defaults write com.apple.systemuiserver "NSStatusItem Visible Siri"  -bool true'
+  notify: restart system ui server
+- name: Set visibility for com.apple.menuextra.airport
+  command: 'defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.airport" -bool true'
+  notify: restart system ui server
+- name: Set visibility for com.apple.menuextra.battery
+  command: 'defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.battery" -bool true'
+  notify: restart system ui server
+- name: Set visibility for com.apple.menuextra.bluetooth
+  command: 'defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -bool true'
+  notify: restart system ui server
+- name: Set visibility for com.apple.menuextra.clock
+  command: 'defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.clock" -bool true'
+  notify: restart system ui server
+- name: Set visibility for com.apple.menuextra.volume
+  command: 'defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -bool true'
+  notify: restart system ui server
+
+- name: Set menubar items
+  command: 'defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Volume.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"'
+  notify: restart system ui server

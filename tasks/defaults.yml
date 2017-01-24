@@ -16,24 +16,6 @@
 - name: Expand save panel by default
   command: "defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true"
 
-- name: Don't show Siri in menu bar
-  command: 'defaults write com.apple.systemuiserver "NSStatusItem Visible Siri" -bool false'
-
-- name: Show airport symbole in menubar
-  command: 'defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.airport" -bool true'
-
-- name: Show battery symbol in menubar
-  command: 'defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.battery" -bool true'
-
-- name: Show clock in menubar
-  command: 'defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.clock" -bool true'
-
-- name: Show volume in menubar
-  command: 'defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -bool true'
-
-- name: Set menubar items # Not sure if this is needed
-  command: 'defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Clock.menu", "/System/Library/CoreServices/Menu Extras/Battery.menu", "/System/Library/CoreServices/Menu Extras/AirPort.menu", "/System/Library/CoreServices/Menu Extras/Volume.menu"'
-
 - name: 24 hour clock with date and day
   command: "defaults write com.apple.menuextra.clock 'DateFormat' -string 'EEE MMM d H:mm'"
   notify: restart system ui server
