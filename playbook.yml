@@ -11,6 +11,7 @@
       - .gitignore_global
       - .nvimrc
       - .tmux.conf
+      - .slate.js
       - Brewfile
 
   tasks:
@@ -20,7 +21,6 @@
     - include: tasks/homebrew.yml
     - include: tasks/fish.yml
     - include: tasks/vim.yml
-    - include: tasks/divvy.yml
     - include: tasks/defaults.yml
     - include: tasks/dock.yml
     - include: tasks/ruby.yml
