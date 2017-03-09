@@ -30,6 +30,7 @@
     - include: tasks/services.yml
     - include: tasks/istatmenus.yml
     - include: tasks/menubar.yml
+    - include: tasks/stitch_fix.yml
 
   handlers:
     - name: restart istat menus

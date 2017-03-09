@@ -1,0 +1,4 @@
+- name: Write .fixops.yml
+  template:
+    src: templates/fixops.yml.j2
+    dest: ~/.fixops.yml
