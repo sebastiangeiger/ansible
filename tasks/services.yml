@@ -4,5 +4,9 @@
   ignore_errors: True
 
 - name: Ensure postgresql is started at login
-  command: brew services start postgresql
-  when: "'homebrew.mxcl.postgresql' not in services.stdout"
+  command: brew services start postgresql94
+  when: "'homebrew.mxcl.postgresql94' not in services.stdout"
+
+- name: Ensure redis is started at login
+  command: brew services start redis
+  when: "'homebrew.mxcl.redis' not in services.stdout"
