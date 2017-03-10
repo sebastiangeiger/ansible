@@ -35,6 +35,7 @@
   handlers:
     - name: restart istat menus
       command: "killall 'iStat Menus Status'"
+      ignore_errors: true
     - name: restart dock
       command: "killall Dock"
     - name: restart system ui server

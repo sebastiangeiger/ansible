@@ -1,10 +1,12 @@
 - name: Delete all dock apps
   command: "defaults delete com.apple.dock persistent-apps"
   notify: restart dock
+  ignore_errors: true
 
 - name: Delete all other dock items
   command: "defaults delete com.apple.dock persistent-others"
   notify: restart dock
+  ignore_errors: true
 
 - name: Add Omnifocus to dock
   command: "defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/OmniFocus.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'"
