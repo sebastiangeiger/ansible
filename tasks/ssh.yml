@@ -6,14 +6,14 @@
 
 - name: General ssh key
   user:
-    name: seb
+    name: "{{ lookup('env','USER') }}"
     generate_ssh_key: yes
     ssh_key_bits: 2048
     ssh_key_file: .ssh/id_rsa
 
 - name: SSH key for github
   user:
-    name: seb
+    name: "{{ lookup('env','USER') }}"
     generate_ssh_key: yes
     ssh_key_bits: 2048
     ssh_key_file: .ssh/id_rsa_github

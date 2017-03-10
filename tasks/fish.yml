@@ -1,11 +1,11 @@
 - name: Get userinfo
-  command: finger seb
+  command: "finger {{ lookup('env','USER') }}"
   register: user_info
 
 - name: Change default shell to fish
   become: True
   user:
-    name: seb
+    name: "{{ lookup('env','USER') }}"
     shell: /usr/local/bin/fish
   when: user_info.stdout.find("/usr/local/bin/fish") == -1
 
