@@ -1,4 +1,0 @@
-
-- name: Ensure configured app store apps are installed.
-  command: mas install "{{ item }}"
-  with_items: "{{ app_store_apps }}"
