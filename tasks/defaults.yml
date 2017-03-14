@@ -19,3 +19,7 @@
 - name: 24 hour clock with date and day
   command: "defaults write com.apple.menuextra.clock 'DateFormat' -string 'EEE MMM d H:mm'"
   notify: restart system ui server
+
+- name: Reduce motion
+  command: "defaults write com.apple.universalaccess reduceMotion -bool true"
+  notify: restart system ui server
